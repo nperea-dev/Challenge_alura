@@ -68,6 +68,7 @@ input {
   background-color: #f3f5fc;
   border: none;
   font-size: 1.5rem;
+  padding:0.8rem;
   width: 80%;
   height: 100px;
 }

@@ -1,6 +1,32 @@
 
     window.addEventListener("load", function() {
 
+ 
+  const botonEncriptar = document.getElementById("encriptar")
+  botonEncriptar.addEventListener("click", encriptar);
+  
+  const botonDesencriptar = document.getElementById("desencriptar")
+  botonDesencriptar.addEventListener("click", desencriptar);
+  
+  const botonCopiar = document.getElementById("copiar")
+  botonCopiar.addEventListener("click", copiar)
+
+
+
+
+  function encriptar(){
+    alert("presionaste el boton encriptar")
+  }
+
+  function desencriptar(){
+    alert("presionaste el boton desencriptar")
+  }
+
+  function copiar(){
+    alert("presionaste el boton copiar")
+  }
+
+
   let textoCapturado = prompt("escriba la frase a encriptar");
   let capturado = document.getElementById("capturado");
   let textoEncriptado = document.getElementById("encriptar");
@@ -11,6 +37,7 @@
   capturado.innerText = textoCapturado;
 
 //seccion de encriptado
+
   const transcript = {
     e: "enter",
     i: "imes",

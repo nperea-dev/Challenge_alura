@@ -3,31 +3,34 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon" />
     <link rel="stylesheet" href="style.css">
-    <title>centrar_div</title>
+    <title>challenge alura</title>
   </head>
+
+
   <body>
-    <main>
-      <div class="container">
-        <div class="titulo" >
-            <h1>
-              encriptador
-            </h1></div>
-      
-        <div class="inner-container">
-            <p id="capturado">contenido original</p></div>
-	
-        <div class="inner-container">
-            <p id="encriptar">texto encriptado</p></div>
+    <h1 class="titulo">Encriptador</h1>
+    <div class="container">
+      <div class="container-left">
          
-        <div class="inner-container">
-           <p id="desencriptar">texto desencriptado</p></div>   
-
-
+        <div class="container-text">
+         
+        <input type="text" size="100" name="textoAencriptar" placeholder="escribe tu mensaje a encriptar aqui" /></div>
+         <div class="buttons">
+        <button class="encriptar" id="encriptar">Encriptar</button>
+        <button class="desencriptar" id="desencriptar">Desencriptar</button> </div>
+      </div>
+      <div class="container-right">
+       
+        <p class="texto-salida">aqui aparece el texto procesado</p>
+        <img src="./img/chicoConLupa.png" alt="imagen de investigador" />
         
+        <button class="copiar buttons" id="copiar">Copiar</button>
       </div>
-      </div>
-    </main>
-    <script src="app.js"></script>
+    </div>
+     
+
+    <script src=" "></script>
   </body>
 </html>

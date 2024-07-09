@@ -9,6 +9,9 @@ body {
   background-color: #f3f5fc;
  
 }
+img{
+  display:none;
+}
 .titulo{
   text-align: center;
   color: rgb(146, 73, 73);
@@ -88,4 +91,5 @@ img {
 .copiar{
   background-color: white;
   color:black;
+  display:none;
 }

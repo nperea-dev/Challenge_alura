@@ -5,6 +5,7 @@
  let capturado = document.getElementById("textoAencriptar");
  let textoEncriptado = " ";
  let textoSalida = document.getElementById("texto-salida");
+
  
  //definicion de los objetos transcript y untranscript 
  const transcript = {
@@ -33,9 +34,7 @@ const untranscript = {
 //funciones de los eventos
   
 
-  function desencriptar(){
-    alert("presionaste el boton desencriptar")
-  }
+
 
   function copiar(){
     alert("presionaste el boton copiar")
@@ -47,8 +46,9 @@ botonEncriptar.addEventListener("click", encriptar);
 
   function encriptar(){
     if (capturado.value === "") {
-       textoSalida.innerText =""
-      alert("no has ingresado texto");
+       textoSalida.innerText ="no has ingresado texto alguno"
+      //alert("no has ingresado texto");
+      document.querySelector("img").style.display = "initial";
       return;
     }
     else{
@@ -59,6 +59,8 @@ botonEncriptar.addEventListener("click", encriptar);
       textoEncriptado = textoEncriptado.replaceAll(clave, transcript[clave]);    
       }
     }
+document.querySelector("img").style.display = "none";
+botonCopiar.style.display = "initial";
 textoSalida.innerText = textoEncriptado;
 }
     
@@ -70,8 +72,9 @@ textoSalida.innerText = textoEncriptado;
   
  function desencriptar(){
   if (capturado.value === "") {
-     textoSalida.innerText =""
-    alert("no has ingresado texto");
+    textoSalida.innerText ="no has ingresado texto alguno"
+      
+      document.querySelector("img").style.display = "initial";
     return;
   }
   else{
@@ -82,16 +85,11 @@ textoSalida.innerText = textoEncriptado;
     textoEncriptado = textoEncriptado.replaceAll(clave, untranscript[clave]);    
     }
   }
+document.querySelector("img").style.display = "none";
+botonCopiar.style.display = "initial";
 textoSalida.innerText = textoEncriptado;
 }
 
-
-
- 
-
-  for (let clave in untranscript) {
-    textoParaDesencriptar = textoParaDesencriptar.replaceAll(clave, untranscript[clave]);
-  }
 
   desencripatado.innerText = textoParaDesencriptar;
 

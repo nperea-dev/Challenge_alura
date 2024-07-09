@@ -30,18 +30,20 @@ img{
 width: 45%;
 height: 80vh;
 display: flex;
-flex-direction: column;
 justify-content: space-between;
 align-items: center;
 
 
+}
+.container-left{
+  flex-direction: column;
 }
 .container-right {
   background-color: white;
   -webkit-box-shadow: 21px 39px 27px -8px rgba(227,229,236,1);
   -moz-box-shadow: 21px 39px 27px -8px rgba(227,229,236,1);
   box-shadow: 21px 39px 27px -8px rgba(227,229,236,1);
- 
+  flex-direction: column-reverse;
   border-radius: 20px;
   width: 30vw;
 }

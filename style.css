@@ -82,5 +82,10 @@ img {
 
 .desencriptar{
   background-color: #d8dfe8;
+  color:black;  
 }
  
+.copiar{
+  background-color: white;
+  color:black;
+}

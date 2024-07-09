@@ -1,22 +1,37 @@
 
     window.addEventListener("load", function() {
 
+ // declaracion de variables y eventos
+ let capturado = document.getElementById("textoAencriptar");
+ let textoEncriptado = " ";
+ let textoSalida = document.getElementById("texto-salida");
  
-  const botonEncriptar = document.getElementById("encriptar")
-  botonEncriptar.addEventListener("click", encriptar);
-  
-  const botonDesencriptar = document.getElementById("desencriptar")
-  botonDesencriptar.addEventListener("click", desencriptar);
+ //definicion de los objetos transcript y untranscript 
+ const transcript = {
+  e: "enter",
+  i: "imes",
+  a: "ai",
+  o: "ober",
+  u: "ufat",
+};
+
+const untranscript = {
+  enter:"e",
+  imes:"i",
+  ai:"a",
+  ober:"o",
+  ufat:"u",
+};
+ 
+ 
   
   const botonCopiar = document.getElementById("copiar")
   botonCopiar.addEventListener("click", copiar)
 
 
 
-
-  function encriptar(){
-    alert("presionaste el boton encriptar")
-  }
+//funciones de los eventos
+  
 
   function desencriptar(){
     alert("presionaste el boton desencriptar")
@@ -26,43 +41,53 @@
     alert("presionaste el boton copiar")
   }
 
-
-  let textoCapturado = prompt("escriba la frase a encriptar");
-  let capturado = document.getElementById("capturado");
-  let textoEncriptado = document.getElementById("encriptar");
-  let desencripatado = document.getElementById("desencriptar");
-  let textoParaDesencriptar ="";
-  
-
-  capturado.innerText = textoCapturado;
-
 //seccion de encriptado
+const botonEncriptar = document.getElementById("encriptar")
+botonEncriptar.addEventListener("click", encriptar);
 
-  const transcript = {
-    e: "enter",
-    i: "imes",
-    a: "ai",
-    o: "ober",
-    u: "ufat",
-  };
+  function encriptar(){
+    if (capturado.value === "") {
+       textoSalida.innerText =""
+      alert("no has ingresado texto");
+      return;
+    }
+    else{
+      
+      textoEncriptado = capturado.value;
+         
+      for (let clave in transcript) {
+      textoEncriptado = textoEncriptado.replaceAll(clave, transcript[clave]);    
+      }
+    }
+textoSalida.innerText = textoEncriptado;
+}
+    
 
-  for (let clave in transcript) {
-    textoCapturado = textoCapturado.replaceAll(clave, transcript[clave]);
-  }
-
-  textoEncriptado.innerText = textoCapturado;
-  textoParaDesencriptar = textoCapturado;
-  
-  
-
+   
  //seccion de desencriptado
-  const untranscript = {
-    enter:"e",
-    imes:"i",
-    ai:"a",
-    ober:"o",
-    ufat:"u",
-  };
+ const botonDesencriptar = document.getElementById("desencriptar")
+ botonDesencriptar.addEventListener("click", desencriptar);
+  
+ function desencriptar(){
+  if (capturado.value === "") {
+     textoSalida.innerText =""
+    alert("no has ingresado texto");
+    return;
+  }
+  else{
+    
+    textoEncriptado = capturado.value;
+       
+    for (let clave in untranscript) {
+    textoEncriptado = textoEncriptado.replaceAll(clave, untranscript[clave]);    
+    }
+  }
+textoSalida.innerText = textoEncriptado;
+}
+
+
+
+ 
 
   for (let clave in untranscript) {
     textoParaDesencriptar = textoParaDesencriptar.replaceAll(clave, untranscript[clave]);

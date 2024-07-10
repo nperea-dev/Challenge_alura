@@ -91,7 +91,7 @@ textoSalida.innerText = textoEncriptado;
 }
 
 
-  desencripatado.innerText = textoParaDesencriptar;
+
 
 
 });

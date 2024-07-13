@@ -5,175 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Flexbox Layout</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            
-
-        }
-
-        body,
-        html {
-
-            width: 100vw;
-            height: 100vh;
-            box-sizing: border-box;
-            font-family: Arial, sans-serif;
-            overflow: hidden;
-            padding: 20px;
-        }
-
-        .container {
-
-            width: 95vw;
-            height: 95vh;
-            padding: auto;
-            gap: 5px;
-            display: flex;
-            flex-direction: row;
-        }
-
-        p {
-            font-size: 2rem;
-            color: red;
-            text-align: center;
-            font-weight: bold;
-            margin: 2rem 0px;
-
-        }
-
-        .child1 {
-            flex: 2;
-            background-color: lightblue;
-
-        }
-
-        .inner-child1 {
-
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-
-        }
-
-
-        .child2 {
-            flex: 2;
-            background-color: #40434E;
-            background-image: url("code.png");
-
-
-
-        }
-
-        .child1,
-        .child2 {
-            margin: 10px;
-            border-radius: 20px;
-        }
-
-        input {
-            background-color: lightblue;
-            width: 20rem;
-            font-size: 1.6rem;
-            color: red;
-            text-align: center;
-            margin: 20px;
-            border: none;
-
-        }
-
-        img {
-            max-width: 350px;
-            max-height: 450px;
-        }
-
-        .imagen {
-            width: 50vw;
-            margin: 10px;
-        }
-
-        .botones {
-            display: flex;
-            justify-content: center;
-            gap: 5rem;
-
-        }
-
-        button {
-            width: 200px;
-            padding: 0.5rem;
-            margin: 1rem;
-            font-size: 1rem;
-            color: red;
-            border-radius: 20px;
-        }
-
-        p {
-            text-align: left;
-            margin: 1rem;
-        }
-       .no-mensaje{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            display: none;          
-             
-        }
-
-        /*##################################################################################*/
-
-        @media (max-width: 768px) {
-            body, html {
-                padding: 0;
-                overflow-x: hidden;
-                overflow-y: scroll;
-            }
-            .container {
-                flex-direction: column;
-            }
-
-            .child1,
-            .child2 {
-                flex: 1;
-                padding: auto 0px;
-            }
-           .inner-child2 p{
-            font-size: 1.5rem;
-            
-           }
-           .imagen {
-            margin: 5% 0px;
-            width: 45vw;
-        }
-
-            input {
-            width: 9rem;
-            font-size: 1rem;
-            text-align: left;
-            margin: 0px;
-            padding-right:10px ;
-            border: none;   
-          }
-          
-        
-        }
-    </style>
-
-    <!----=========================================================================================--->
-
-
+   <link rel="stylesheet" href="style2.css">
 </head>
 
+<!---nuevo diseño -->
 <body>
     <div class="container">
         <div class="child1">
-            <div class="inner-child1"> <img class="imagen" src="robot.png" alt="robot pequeño" />
-                <input id="input" type="text" placeholder="escribe aqui tu texto" />
+            <div class="inner-child1"> <img class="imagen" src="./img/robot.png" alt="robot pequeño" />
+                <input id="textoAencriptar" type="text" placeholder="escribe aqui tu texto" />
             </div>
-            <div class="botones"> <button>boton1</button> <button>boton2</button></div>
+            <div class="botones"> <button id="encriptar">encriptar</button> <button id="desencriptar">desencriptar</button></div>
 
 
         </div>
@@ -182,17 +24,19 @@
         <div class="child2">
 
             <div class="inner-child2">
-                <p>Escribe tu mensaje en el cuadro de texto.<br><br>
+                <p id="texto-salida">Escribe tu mensaje en el cuadro de texto.<br><br>
                     Presiona encriptar para ocultar tu mensaje.<br><br>
                     Presoiona desencriptar para revelar un mensaje que haya sido encriptado.</p>
+                    <div class="botones"> <button>copiar</button></div>
             </div>
 
             <div class="no-mensaje">
-                <img class="imagen" src="fingerPrint.png"  alt="huella con lupa" />
-                <div class="botones"> <button>boton3</button></div>
+                <img id="no-mensaje-imagen" class="imagen" src="./img/fingerPrint.png"  alt="huella con lupa" />
+                
             </div>
         </div>
     </div>
+   <script src="app2.js"></script>
 </body>
 
 </html>

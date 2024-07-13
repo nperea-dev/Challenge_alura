@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+body,
+html {
+
+    width: 100vw;
+    height: 100vh;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.container {
+
+    width: 95vw;
+    height: 95vh;
+    padding: auto;
+    gap: 5px;
+    display: flex;
+    flex-direction: row;
+}
+
+p {
+    font-size: 2rem;
+    color: red;
+    text-align: center;
+    font-weight: bold;
+    margin: 2rem 0px;
+
+}
+
+.child1 {
+    flex: 2;
+    background-color: lightblue;
+
+}
+
+.inner-child1 {
+
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+
+.child2 {
+    flex: 2;
+    background-color: #40434E;
+    background-image: url("./img/code.png");
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+
+.child1,
+.child2 {
+    margin: 10px;
+    border-radius: 20px;
+}
+
+.child2 button{display: none;}
+
+input {
+    background-color: lightblue;
+    width: 20rem;
+    font-size: 1.6rem;
+    color: red;
+    text-align: center;
+    margin: 20px;
+    border: none;
+
+}
+
+img {
+    max-width: 350px;
+    max-height: 450px;
+}
+
+.imagen {
+    width: 50vw;
+    margin: 10px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+
+}
+
+button {
+    width: 200px;
+    padding: 0.5rem;
+    margin: 1rem;
+    font-size: 1rem;
+    color: red;
+    border-radius: 20px;
+}
+
+p {
+    text-align: left;
+    margin: 1rem;
+}
+.child2 img{
+   
+    display: none;          
+     
+}
+
+/*##################################################################################*/
+
+@media (max-width: 768px) {
+    body, html {
+        padding: 0;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+    .container {
+        flex-direction: column;
+    }
+
+    .child1,
+    .child2 {
+        flex: 1;
+        padding: auto 0px;
+    }
+   .inner-child2 p{
+    font-size: 1.5rem;
+    
+   }
+   .imagen {
+    margin: 5% 0px;
+    width: 45vw;
+}
+
+    input {
+    width: 9rem;
+    font-size: 1rem;
+    text-align: left;
+    margin: 0px;
+    padding-right:10px ;
+    border: none;   
+  }
+  
+
+}

@@ -57,49 +57,38 @@ botonCopiar.addEventListener("click", copiar)
 // seccion de copiado
 
 function copiar(){
-console.log(textoEncriptado)
-console.log(capturado.value)
-capturado.value="";
-capturado.value=textoEncriptado;
-textoSalida.innerText= "";
+botonCopiar.style.display = "none";
+navigator.clipboard.writeText(textoSalida.innerText)
+textoSalida.innerText= " 📥	 Tu mensaje ha sido copiado al portapapeles! 📥	"
 
 }
 
+// seccion de desencriptado.
+
+const botonDesencriptar = document.getElementById("desencriptar")
+botonDesencriptar.addEventListener("click", desencriptar);
+
+function desencriptar(){
     
-/*
-   
- //seccion de desencriptado
- const botonDesencriptar = document.getElementById("desencriptar")
- botonDesencriptar.addEventListener("click", desencriptar);
-  
- function desencriptar(){
- 
   if (capturado.value === "") {
-    textoSalida.innerText ="no has ingresado texto alguno"
-      
-      document.getElementById("no-mensaje-imagen").style.display = "initial";
+     textoSalida.innerText ="no has ingresado texto alguno"
+    document.getElementById("no-mensaje-imagen").style.display = "initial";
     return;
   }
   else{
     
     textoEncriptado = capturado.value;
-       
     for (let clave in untranscript) {
-    textoEncriptado = textoEncriptado.replaceAll(clave, untranscript[clave]);    
+    textoEncriptado = textoEncriptado.replaceAll(clave, untranscript[clave]);      
+    
     }
   }
-document.querySelector("img").style.display = "none";
-botonCopiar.style.display = "initial";
+document.getElementById("no-mensaje-imagen").style.display = "none";
 textoSalida.innerText = textoEncriptado;
+botonCopiar.style.display = "initial";
+botonCopiar.addEventListener("click", copiar)
+
 }
-
-*/
-
-
-
-
-
-
 
 
 });

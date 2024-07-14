@@ -14,6 +14,8 @@ html {
     font-family: Arial, sans-serif;
     overflow: hidden;
     padding: 20px;
+    background-color:whitesmoke;
+
 }
 
 .container {
@@ -104,12 +106,12 @@ button {
     padding: 0.5rem;
     margin: 1rem;
     font-size: 1.5rem;
-    color: red;
     border-radius: 20px;
 }
 
 #encriptar {
     background-color: #0a3871;
+    color:white;
   }
   
   #desencriptar {
@@ -143,7 +145,7 @@ p {
     }
     .container {
         flex-direction: column;
-    }
+        margin:auto;
 
     .child1,
     .child2 {
@@ -170,13 +172,15 @@ p {
   .botones {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1rem;
+    margin:  10px 0 10px 0;
 
 }
   
   button{
+    width: 200px;
     font-size: 1.3rem;
-    margin: 30px;
+   ;
 
 
   }

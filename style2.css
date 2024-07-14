@@ -19,7 +19,7 @@ html {
 .container {
 
     width: 95vw;
-    height: 95vh;
+    height: 50vh;
     padding: auto;
     gap: 5px;
     display: flex;
@@ -88,7 +88,7 @@ img {
 }
 
 .imagen {
-    width: 50vw;
+    width: 30%;
     margin: 10px;
 }
 
@@ -103,10 +103,25 @@ button {
     width: 200px;
     padding: 0.5rem;
     margin: 1rem;
-    font-size: 1rem;
+    font-size: 1.5rem;
     color: red;
     border-radius: 20px;
 }
+
+#encriptar {
+    background-color: #0a3871;
+  }
+  
+  #desencriptar {
+    background-color: #d8dfe8;
+    color: black;  
+  }
+  
+  #copiar {
+    background-color: white;
+    color: black;
+    display: none;
+  }
 
 p {
     text-align: left;
@@ -152,6 +167,18 @@ p {
     padding-right:10px ;
     border: none;   
   }
+  .botones {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+
+}
   
+  button{
+    font-size: 1.3rem;
+    margin: 30px;
+
+
+  }
 
 }

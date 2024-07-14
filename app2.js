@@ -25,6 +25,8 @@ const untranscript = {
 };
  
  //funciones de los eventos
+ const botonCopiar = document.getElementById("copiar")
+
   
 //seccion de encriptado
 const botonEncriptar = document.getElementById("encriptar")
@@ -40,20 +42,29 @@ botonEncriptar.addEventListener("click", encriptar);
     else{
       
       textoEncriptado = capturado.value;
-        console.log(capturado.value) 
-        console.log(">>>>>>>>>>>>>>>>>>>>>") 
-        console.log(textoEncriptado) 
       for (let clave in transcript) {
       textoEncriptado = textoEncriptado.replaceAll(clave, transcript[clave]);  
       
       }
     }
 document.getElementById("no-mensaje-imagen").style.display = "none";
-//botonCopiar.style.display = "default";
 textoSalida.innerText = textoEncriptado;
 botonCopiar.style.display = "initial";
+botonCopiar.addEventListener("click", copiar)
 
 }
+
+// seccion de copiado
+
+function copiar(){
+console.log(textoEncriptado)
+console.log(capturado.value)
+capturado.value="";
+capturado.value=textoEncriptado;
+textoSalida.innerText= "";
+
+}
+
     
 /*
    
@@ -83,11 +94,7 @@ textoSalida.innerText = textoEncriptado;
 }
 
 */
-const botonCopiar = document.getElementById("copiar")
-botonCopiar.addEventListener("click", copiar)
-function copiar(){
-  alert("presionaste el boton copiar")
-}
+
 
 
 

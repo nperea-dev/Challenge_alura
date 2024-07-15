@@ -27,7 +27,7 @@ html {
     display: flex;
     flex-direction: row;
 }
-.social-media {
+.social-media{
     width: 10vw;
     display: flex;
     justify-content: space-evenly;
@@ -48,6 +48,7 @@ p {
 .child1 {
     flex: 2;
     background-color: lightblue;
+    
 
 }
 
@@ -77,6 +78,7 @@ p {
 .child2 {
     margin: 10px;
     border-radius: 20px;
+    
 }
 
 .child2 button{display: none;}
@@ -152,16 +154,21 @@ p {
         overflow-y: scroll;
        
     }
-    .social-media, a {
-        width: 50vw;
+    footer, .derechos-de-autor{
+margin-bottom:10px;
+    }
+   .social-media {
+        width: 95%;
+        margin: 1rem;
         display: flex;
-        justify-content: left;
-        margin: 3px;
-        font-size: 2rem;
+        justify-content: space-between;
+       
+    
+     
       }
-    .social-media, a {
+  .social-media, a {
         text-decoration: none;
-           font-size: 2rem;
+        font-size: 2.5rem;
       }
     
     .container {
@@ -201,9 +208,6 @@ p {
   button{
     width: 200px;
     font-size: 1.3rem;
-   ;
+   ;}
 
-
-  }
-
-}
+}}

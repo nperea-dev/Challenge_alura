@@ -49,6 +49,7 @@ botonEncriptar.addEventListener("click", encriptar);
     }
 document.getElementById("no-mensaje-imagen").style.display = "none";
 textoSalida.innerText = textoEncriptado;
+capturado.value=""
 botonCopiar.style.display = "initial";
 botonCopiar.addEventListener("click", copiar)
 
@@ -60,6 +61,7 @@ function copiar(){
 botonCopiar.style.display = "none";
 navigator.clipboard.writeText(textoSalida.innerText)
 textoSalida.innerText= " 📥	 Tu mensaje ha sido copiado al portapapeles! 📥	"
+capturado.value=""
 
 }
 
@@ -87,6 +89,7 @@ document.getElementById("no-mensaje-imagen").style.display = "none";
 textoSalida.innerText = textoEncriptado;
 botonCopiar.style.display = "initial";
 botonCopiar.addEventListener("click", copiar)
+capturado.value=""
 
 }
 

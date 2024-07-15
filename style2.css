@@ -27,6 +27,14 @@ html {
     display: flex;
     flex-direction: row;
 }
+.social-media {
+    width: 10vw;
+    display: flex;
+    justify-content: space-evenly;
+    margin: 30px;
+    font-size: 3rem;
+  }
+
 
 p {
     font-size: 2rem;
@@ -142,7 +150,20 @@ p {
         padding: 0;
         overflow-x: hidden;
         overflow-y: scroll;
+       
     }
+    .social-media, a {
+        width: 50vw;
+        display: flex;
+        justify-content: left;
+        margin: 3px;
+        font-size: 2rem;
+      }
+    .social-media, a {
+        text-decoration: none;
+           font-size: 2rem;
+      }
+    
     .container {
         flex-direction: column;
         margin:auto;

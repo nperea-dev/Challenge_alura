@@ -17,7 +17,43 @@ html {
     background-color:whitesmoke;
 
 }
+body {
+    display: flex;
+    flex-direction: column;
+}
 
+footer{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+
+.social-media{
+    width: 50vw;
+    margin: 2rem 0;
+    display: flex;
+    justify-content: space-evenly;
+    font-size: 3rem;
+  }
+
+   .social-media a .bi {
+    text-decoration: none;
+    color:white;
+    background-color: black;
+    padding: 10px;
+    border-radius: 33px;
+
+}
+.social-media a .bi:hover {
+    color:black;
+    background-color:white;
+
+}
+
+
+        
 .container {
 
     width: 95vw;
@@ -27,13 +63,6 @@ html {
     display: flex;
     flex-direction: row;
 }
-.social-media{
-    width: 10vw;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 30px;
-    font-size: 3rem;
-  }
 
 
 p {
@@ -148,32 +177,55 @@ p {
 /*##################################################################################*/
 
 @media (max-width: 768px) {
-    body, html {
+    *{margin: 0;
+    padding: 0;}
+    
+    
+    body,html {
         padding: 0;
         overflow-x: hidden;
         overflow-y: scroll;
-       
-    }
-    footer, .derechos-de-autor{
-margin-bottom:10px;
-    }
-   .social-media {
-        width: 95%;
-        margin: 1rem;
+        height:710px;
         display: flex;
-        justify-content: space-between;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap:11rem;
        
-    
-     
-      }
-  .social-media, a {
-        text-decoration: none;
-        font-size: 2.5rem;
-      }
+    }
+
+    footer{
+        width: 100vw;
+        display: flex;
+        flex-direction: column;
+         }
+         .derechos-de-autor{
+            text-align: center;
+        
+        }
+
+         .social-media{
+            width: 100vw;
+            margin: 3.2rem 0 1.5rem 0 ;
+            display: flex;
+            justify-content: space-evenly;
+            font-size: 2rem;
+          }
+
+          .social-media a .bi {
+            text-decoration: none;
+            color:white;
+            background-color: black;
+            padding: 10px;
+            border-radius: 33px;
+        
+        }
+      
     
     .container {
         flex-direction: column;
         margin:auto;
+
+        
 
     .child1,
     .child2 {
@@ -207,7 +259,7 @@ margin-bottom:10px;
   
   button{
     width: 200px;
-    font-size: 1.3rem;
-   ;}
+    font-size: 1.3rem;}
 
-}}
+}
+}

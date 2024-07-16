@@ -256,6 +256,13 @@ p {
     margin:  10px 0 10px 0;
 
 }
+.no-mensaje img{
+    height: 123px;
+    width: 70px;
+    margin: 5px;
+    padding: 8px;
+    background-color: whitesmoke;
+}
   
   button{
     width: 200px;

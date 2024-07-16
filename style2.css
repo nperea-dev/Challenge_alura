@@ -67,7 +67,7 @@ footer{
 
 p {
     font-size: 2rem;
-    color: red;
+    color: white;
     text-align: center;
     font-weight: bold;
     margin: 2rem 0px;
@@ -116,7 +116,7 @@ input {
     background-color: lightblue;
     width: 20rem;
     font-size: 1.6rem;
-    color: red;
+    color: black;
     text-align: center;
     margin: 20px;
     border: none;

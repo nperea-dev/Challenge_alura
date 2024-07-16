@@ -8,7 +8,7 @@ que encripte/desencripte el mensaje de texto  ingresado a traves
 de un input y que sea responsive.
 
 ----
-
+![portada del proyecto](portada.png)
 
 
 
